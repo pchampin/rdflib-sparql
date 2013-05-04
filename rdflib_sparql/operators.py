@@ -732,8 +732,8 @@ def RelationalExpression(e, ctx):
 
     ops = dict([('>', lambda x, y: x.__gt__(y)),
                 ('<', lambda x, y: x.__lt__(y)),
-                ('=', lambda x, y: x.eq(y)),
-                ('!=', lambda x, y: x.neq(y)),
+                ('=', lambda x, y: x.__eq__(y)),
+                ('!=', lambda x, y: x.__ne__(y)),
                 ('>=', lambda x, y: x.__ge__(y)),
                 ('<=', lambda x, y: x.__le__(y)),
                 ('IN', pyop.contains),
